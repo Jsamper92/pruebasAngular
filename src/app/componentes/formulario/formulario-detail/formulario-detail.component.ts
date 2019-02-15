@@ -7,11 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FormularioDetailComponent implements OnInit {
   @Input() usuarios: string;
-  constructor() { }
+  constructor() {
+    this.clickOk();
+  }
+
+  clickOk(){
+    const btnOk = document.querySelector('.botonOk');
+    console.log(btnOk);
+  }
 
   ngOnInit() {
+
     console.log(this.usuarios);
-    console.log(!this.usuarios =='');
   }
 
 }

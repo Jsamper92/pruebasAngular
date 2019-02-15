@@ -1,3 +1,21 @@
-<h2>Usuario</h2>
-<p>{{usuarios.name}}</p>
-<p>{{usuarios.lastName}}</p>
+<section *ngIf="!usuarios.name == 0 && !usuarios.lastName == 0">
+  <h2 >Usuario</h2>
+  <table class="table">
+    <thead>
+      <th scope="col">name</th>
+      <th scope="col">lastname</th>
+    </thead>
+
+    <tbody>
+      <td>{{ usuarios.name }}</td>
+      <td>{{ usuarios.lastName }}</td>
+    </tbody>
+  </table>
+
+  <button
+    class="botonOk"
+    (click)="clickOk()"
+  >
+    More information
+  </button>
+</section>
