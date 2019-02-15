@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Enlace</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+        <td [ngStyle]="{'width': '800px'}">{{listado.name}}</td>
+        <td > <button (click)="sumar()">More information</button> </td>
+        <!-- <td [ngStyle]="{'width': '800px'}">{{listado.name}}</td>
+        <td><img src="{{listado.sprites.back_default}}" alt=""></td>
+        <td><a href="{{listado.url}}">enlace</a></td> -->
+      </tr>
+    </tbody>
+  </table>

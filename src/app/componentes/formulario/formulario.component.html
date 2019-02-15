@@ -1,0 +1,32 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    name
+    <input id="formName" type="text" placeholder="nombre" formControlName="name"
+  /></label>
+  <label>
+    last name
+    <input
+      id="formLastName"
+      type="text"
+      placeholder="apellido"
+      formControlName="lastName"
+  /></label>
+  <button type="submit" (click)="addUser()">Submit</button>
+</form>
+
+<div>
+  <h1>Usuario actual</h1>
+  <p>{{ profileForm.value.name }}</p>
+  <p>{{ profileForm.value.lastName }}</p>
+</div>
+
+<div>
+  <h1>listado usuarios</h1>
+
+  <div *ngFor="let item of formArray">
+    <br />
+    <div>
+      <app-formulario-detail [usuarios]="item"></app-formulario-detail>
+    </div>
+  </div>
+</div>
